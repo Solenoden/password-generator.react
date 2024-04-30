@@ -1,0 +1,10 @@
+$mobile-smallest: 0;
+$mobile-largest: 375px;
+
+$desktop-smallest: $mobile-largest + 1px;
+
+@mixin apply-to-desktop() {
+  @media only screen and (min-width: $desktop-smallest) {
+    @content;
+  }
+}

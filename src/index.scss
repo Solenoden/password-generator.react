@@ -1,0 +1,12 @@
+@import "src/theme/typography";
+@import "src/theme/colors";
+@import "src/theme/utilities";
+@import "src/theme/widgets";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-dark;
+}

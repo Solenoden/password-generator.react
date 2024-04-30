@@ -1,0 +1,9 @@
+@import "src/theme/colors";
+
+.card {
+  background-color: $primary-normal;
+  color: $primary-contrast;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
