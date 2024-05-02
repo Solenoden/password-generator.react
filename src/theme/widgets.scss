@@ -6,4 +6,8 @@
   padding: 32px;
   display: flex;
   flex-direction: column;
+
+  &.card-dark {
+    background-color: $primary-dark;
+  }
 }
