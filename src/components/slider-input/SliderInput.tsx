@@ -1,12 +1,16 @@
 import './SliderInput.scss';
 import { Slider } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 
-type SliderInputProps = { min: number, max: number, label: string };
+type SliderInputProps = { min: number, max: number, label: string, onChange: (value: number) => void };
 
 function SliderInput(props: SliderInputProps) {
     const [value, setValue] = React.useState(0);
 
+    useEffect(() => {
+        props.onChange(value);
+    }, [value, props.onChange]);
+    
     function handleValueChange(event: Event, newValue: number | number[]): void {
         setValue(newValue as number);
     }

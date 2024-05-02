@@ -1,11 +1,15 @@
 import './CheckboxInput.scss';
-import React from "react";
+import React, { useEffect } from "react";
 import checkIcon from '../../assets/images/icon-check.svg';
 
-type CheckboxInputProps = { label: string };
+type CheckboxInputProps = { label: string, onChange: (value: boolean) => void };
 
 function CheckboxInput(props: CheckboxInputProps) {
     const [value, setValue] = React.useState<boolean>(false);
+
+    useEffect(() => {
+        props.onChange(value);
+    }, [value, props.onChange]);
 
     function toggleCheckbox(): void {
         setValue(!value);
