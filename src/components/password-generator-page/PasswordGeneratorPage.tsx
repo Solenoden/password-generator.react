@@ -50,7 +50,9 @@ function PasswordGeneratorPage() {
     return (
         <div id="page-container">
             <div id="content-container">
-                <h6 id="title" className="heading-medium">Password Generator</h6>
+                <div id="floating-title-container">
+                    <h6 id="title" className="heading-medium">Password Generator</h6>
+                </div>
 
                 <div id="password-card" className="card">
                     <div className="row justify-content-between align-items-center">

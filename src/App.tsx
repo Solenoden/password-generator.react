@@ -4,11 +4,7 @@ import PasswordGeneratorPage from './components/password-generator-page/Password
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <PasswordGeneratorPage />
-      </header>
-    </div>
+      <PasswordGeneratorPage />
   );
 }
 
