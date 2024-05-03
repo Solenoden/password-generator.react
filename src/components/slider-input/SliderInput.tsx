@@ -21,6 +21,7 @@ function SliderInput(props: SliderInputProps) {
                 <h6 className="body">{ props.label }</h6>
                 <span id="character-count" className="heading-large">{value}</span>
             </div>
+            {/* TODO: Replace with re-styled native slider*/}
             <Slider id="internal-slider"
                     value={value}
                     onChange={handleValueChange}
