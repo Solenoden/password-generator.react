@@ -7,6 +7,7 @@ import { PasswordStrength } from "../../enums/password-strength.enum";
 import { PasswordService } from "../../services/password.service";
 import React from "react";
 import Button from "../button/Button";
+import SvgIcon from "../svg-icon/SvgIcon";
 
 const PASSWORD_PLACEHOLDER = 'P4$5W0rD!';
 
@@ -42,6 +43,10 @@ function PasswordGeneratorPage() {
         ].includes(true);
     }
 
+    function copyPasswordToClipboard(): void {
+        navigator.clipboard.writeText(password).then(() => alert('Password Copied to Clipboard'));
+    }
+
     return (
         <div id="page-container">
             <div id="content-container">
@@ -53,8 +58,16 @@ function PasswordGeneratorPage() {
                             <h6 className="heading-large">{ password }</h6> :
                             <h6 className="heading-large placeholder">{ PASSWORD_PLACEHOLDER }</h6>
                         }
+                        <div id="copy-icon" onClick={copyPasswordToClipboard}>
+                            <SvgIcon
+                                isClickable={true}
+                                viewboxWidth="21"
+                                viewboxHeight="24"
+                                svgInnerId="root"
+                                iconPath="/images/icon-copy.svg"
+                            />
+                        </div>
 
-                        <img src={copyIcon} alt="Copy to Clipboard"/>
                     </div>
                 </div>
 

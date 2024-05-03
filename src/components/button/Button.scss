@@ -16,8 +16,11 @@ $hover-border-width: 2px;
     color: $primary-normal;
   }
 
-  img {
+  .next-arrow {
     margin-left: 24px;
+    width: 12px;
+    height: 12px;
+    margin-bottom: 4px;
   }
 }
 
@@ -29,7 +32,7 @@ $hover-border-width: 2px;
   padding-bottom: $padding-vertical - $hover-border-width;
   cursor: pointer;
 
-  h6, img {
+  h6, .next-arrow {
     color: $secondary-normal !important;
   }
 }

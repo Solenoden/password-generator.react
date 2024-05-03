@@ -24,8 +24,7 @@ export class PasswordService {
             uppercase: options.shouldIncludeUppercase || false,
             lowercase: options.shouldIncludeLowercase || false,
             numbers: options.shouldIncludeNumbers || false,
-            symbols: options.shouldIncludeSymbols || false,
-            excludeSimilarCharacters: true
+            symbols: options.shouldIncludeSymbols || false
         });
 
         return newPassword;
@@ -34,7 +33,7 @@ export class PasswordService {
     public assessPasswordStrength(password: string): PasswordStrength {
         const assessment = passwordStrengthAssessor(password);
         const strengthPercentage = (assessment.score + 1) / 5 * 100;
-        const strengthIndex = Math.floor((strengthPercentage / 100) * (PASSWORD_STRENGTHS_RANKED.length - 1));
+        const strengthIndex = Math.round((strengthPercentage / 100) * (PASSWORD_STRENGTHS_RANKED.length - 1));
         return PASSWORD_STRENGTHS_RANKED[strengthIndex];
     }
 }
