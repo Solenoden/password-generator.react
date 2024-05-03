@@ -1,0 +1,39 @@
+@import "src/theme/colors";
+
+$padding-vertical: 21px;
+$hover-border-width: 2px;
+
+// Base Styles
+#button-component {
+  background-color: $secondary-normal;
+  border: none;
+  outline: none;
+  padding-top: $padding-vertical;
+  padding-bottom: $padding-vertical;
+  transition: background-color 0.3s ease-in-out;
+
+  h6 {
+    color: $primary-normal;
+  }
+
+  img {
+    margin-left: 24px;
+  }
+}
+
+// Stateful Styles
+#button-component:hover:not(:disabled) {
+  background-color: transparent;
+  border: $hover-border-width solid $secondary-normal;
+  padding-top: $padding-vertical - $hover-border-width;
+  padding-bottom: $padding-vertical - $hover-border-width;
+  cursor: pointer;
+
+  h6, img {
+    color: $secondary-normal !important;
+  }
+}
+
+#button-component:disabled {
+  background-color: $primary-light;
+}

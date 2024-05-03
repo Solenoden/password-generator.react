@@ -25,7 +25,6 @@ export class PasswordService {
             lowercase: options.shouldIncludeLowercase || false,
             numbers: options.shouldIncludeNumbers || false,
             symbols: options.shouldIncludeSymbols || false,
-            strict: true,
             excludeSimilarCharacters: true
         });
 

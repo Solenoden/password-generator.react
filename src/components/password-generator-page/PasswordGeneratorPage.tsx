@@ -6,6 +6,7 @@ import PasswordStrengthIndicator from "../password-strength-indicator/PasswordSt
 import { PasswordStrength } from "../../enums/password-strength.enum";
 import { PasswordService } from "../../services/password.service";
 import React from "react";
+import Button from "../button/Button";
 
 const PASSWORD_PLACEHOLDER = 'P4$5W0rD!';
 
@@ -79,8 +80,7 @@ function PasswordGeneratorPage() {
                         <PasswordStrengthIndicator strength={passwordStrength}></PasswordStrengthIndicator>
                     </div>
 
-                    {/* TODO: Replace with custom button */}
-                    <button onClick={generatePassword} disabled={!determineCanGeneratePassword()}>GENERATE</button>
+                    <Button onClick={generatePassword} isDisabled={!determineCanGeneratePassword()} shouldAppendArrow={true}>GENERATE</Button>
                 </div>
             </div>
         </div>
